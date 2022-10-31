@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body style="background-color: rgb(145, 121, 230)">
+    <header>
+      <h1 style="text-align: center">Best Candy</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="Best-candy.html">Candy fillout page</a></li>
+          <li><a href="Need-More-Inspo.html">Candy lists and ideas</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- 
+        The form tag is used to create a container where all the inputs for a form
+        must be put inside.
+        The attributes that are required are name, id, and method.
+        name gives some descriptive information about what the form will be used for.
+         
+        id allows us to reference this form later in fieldsets and other areas of our
+        code.
+        method has two typical values: get and post. Get is used for forms that do
+        not ask for personal information (search bars, etc.). Post is used for forms
+        that ask for personal information (login and signup pages, etc.).
+      -->
+
+      <form name="Candy-suggestions" id="Halloween-Candy" method="get">
+        <!-- 
+         This is a text input. type="text", name, and id are all required attributes.
+         The required attribute is only necessary when you want to make sure the user
+         has to fill in the input before submitting the form.
+         The type attribute defines the type of input.
+         The name attribute defines the variable name that would be used for the
+         input when the data gets passed to the server (requires back-end scripting,
+         which is beyond the scope of this course).
+         The id attribute allows us to reference the input from the label and from
+         other parts of our code.
+         All inputs need a label with the for attribute that links the label to the
+         input using the input's id attribute.
+         When an input is required, it is important to include the word required
+         in the label's text.
+        -->
+
+        <label for="Your Favrouit Halloween Candy"> Please Enter Your Favorite Halloween Candy [required]: </label>
+        <input type="text" name="H-Candy" id="Halloween-Candy" required />
+        <br />
+        <br />
+
+        <label for="How Much Per Candy?"> How Many Pieces Are Inside The Candy/Candys [required]</label>
+        <input type="number" name="Pieces Candy" id="Pieces-Candy" maxlength="" required />
+        <br />
+        <br />
+
+        <!-- 
+         A fieldset is an area in your form where you put inputs that are more related to each other
+         than they are related to other inputs in the form (i.e., a list of travel items is more
+         related to each other than the country the person is recommending).
+         form is an important attribute to link the fieldset to the form it is related to.
+        -->
+
+        <fieldset form="Candy">
+          <!-- 
+         A legend describes how the inputs inside the fieldset are all related.
+        -->
+
+          <legend>What is the best type of halloween candy?</legend>
+
+          <!-- 
+         This is a checkbox input. Note, this is an input where the input typically comes
+         before the label.
+         type="checkbox", name, and id are all required. The value attribute is also required 
+         and provides its value to the server if the user checks that box and submits the form.
+         In this case, what would be passed to the server is waterBottle=bottle.
+        -->
+
+          <input type="checkbox" name="Gummies" id="Gummies" value="Gummies" />
+          <label for="Gummies">Gummies</label>
+          <br />
+
+          <input type="checkbox" name="Chocolate" id="Chocolate" value="Chocolate" />
+          <label for="Chocolate-type">Chocolate type</label>
+          <br />
+
+          <input type="checkbox" name="Hard candy" id="HardCandy" value="Candy" />
+          <label for="Hard candy">Hard candy</label>
+          <br />
+          <br />
+
+          <label>Do you have any other suggestions?</label>
+          <input type="text" name="candySuggestion" id="candy-suggestion" />
+        </fieldset>
+        <br />
+
+        <!--  
+            This is a select input, which is essentially a dropdown input.
+            name and id are the required attributes for a select input.
+            Select inputs are widely used, but can lead to accessibility issues.
+            If you can accomplish the same thing you want to do with a different
+            type of input (i.e., radio buttons, text-based, etc.), you should use
+            the other method of getting this information.
+          -->
+
+        <label for="country">Which country is this made in? [required]</label>
+        <select name="countrySelect" id="country" required>
+          <!-- 
+            optgroups let you group the options inside your select input.
+            label is required so that the optgroup displays what the category is
+            for the options inside that group.
+          -->
+
+          <optgroup label="Main candy countrys">
+            <!-- 
+            The option tag is the actual option that a user can select. 
+            It requires the value attribute for when the selection gets sent to
+            the server.
+          -->
+            <option value="canada">Canada</option>
+            <option value="unitedStates">U.S.A.</option>
+            <option value="mexico">Mexico</option>
+            <option value="mexico">Japan</option>
+            <option value="mexico">China</option>
+            <option value="mexico">Other</option>
+          </optgroup>
+        </select>
+        <br />
+        <br />
+
+        <!-- 
+           This is a textarea input. This allows a user to enter multiple lines of information
+           for a form.
+           name and id are required attributes.
+           Highly recommended attributes are rows and cols. rows defines the number of lines a
+           user can type before a scrollbar appears. cols defines the number of characters across
+           a user can type before their input goes to thwe next line.
+          -->
+
+        <label for="comments">Additional Comments</label>
+        <textarea name="additionalComments" id="comments" rows="10" cols="50"></textarea>
+        <br />
+        <br />
+
+        <!-- 
+         this is an example of a reset button inpute. type=" reset ", name and id are all required.
+         value is an optional attribute for if you want to change the default text on the button.
+        -->
+        <input type="reset" name="clearForm" id="clear" value="Click This to Clear All Inputs" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!--
+         this is an example of a submit button input.  Note: this has to be inside the form tag.
+         type="submit", name, and id are all required. to value optional for the same reason as reset.
+        -->
+        <input type="submit" name="submitButton" id="submit" value="Click This to Submit Your Suggestion" />
+      </form>
+    </main>
+    <footer>
+      <p>&#169; Shiyah</p>
+    </footer>
+  </body>
+</html>

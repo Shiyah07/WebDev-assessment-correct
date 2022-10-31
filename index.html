@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- the title tag changes the text that shows up in the tab on the top web browser.-->
+  <title>Halloween Home</title>
+</head>
+<style>
+body {
+  background-color: rgb(77, 74, 74);
+  
+}
+
+h1 {
+  color: aliceblue;
+}
+
+p {
+color: aliceblue;
+}
+li {
+  color: aliceblue;
+}
+
+</style>
+
+<body>
+
+
+  <header>
+       <h1>Welcome To The All About Haloween home page</h1>
+         <p> This website is about Halloween and when itstarted,
+           why it started and the best ranked candy! </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home page</a> </li>
+          <li><a href="Candy-forms.html"> Fill out Candy Form</a> </li>
+          <li><a href="Need-More-Inspo.html">Candy lists and ideas</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+   <main>
+
+      <fieldset from="Have-U-Halloween" name="Have-U-Halloween-Yes-No">
+          <legend style="text-decoration-color:azure;">Do you know what <u> Halloween </u> is?:</legend>
+          <!-- ask user for the type of cat they are recomending -->
+          <input type="text" name="Halloween?" id="Halloween" />
+
+          <p>Would you say it is one of your favorite holidays:</p>
+          <!--radio buttions you can select one
+          note: inmortant that all radio buttons in the same group have the same name-->
+          <input type="radio" name="yes-no" id="yes" value="yes" />
+          <!--label has for="the id of the thing your attaching it to"-->
+          <label for="yes">Yes</label>
+
+          <input type="radio" name="yes-no" id="no" value="no" />
+          <label for="no">No</label>
+        </fieldset>
+        <br/>
+        <br/>
+
+    <!--
+       Each element that we create for a website NEEDS to go in th body of the document.
+        
+       Mos elements start wth an pening tag and end with a closeing tag.
+       In this example, <h1> is the opeming tag and </h1> is the closing tag.
+       inside the opening nd closeing tags, is the content that you actualy want to display on the website
+       this is an example of a heading tag where it is the largest possible heading.
+     -->
+
+     <!--
+         this is an example of a submit button input.  Note: this has to be inside the form tag.
+         type="submit", name, and id are all required. to value optional for the same reason as reset.
+        -->
+        <input type="submit" name="submitButton" id="submit" value="Click This to Submit Your Answer" />
+      
+     <footer>
+      <p>&#169; Shiyah</p>
+      </footer>
+  </body>
+</html>
